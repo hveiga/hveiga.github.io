@@ -1,0 +1,46 @@
+# Basic
+title: Héctor Veiga Ortiz
+subtitle: Software Engineer
+description: Co-author of <a href="https://www.packtpub.com/application-development/akka-cookbook" target="_blank">Akka Cookbook</a>. Get your copy now!
+welcome_message: A lead software engineer currently employed at <a href="https://www.here.com/" target="_blank">HERE Technologies</a>. Fan of distributed applications, availability, scalability and failure tolerance.
+creator: Héctor Veiga Ortiz
+
+url: "http://hveiga.com"
+
+permalink: /:year/:month/:title/
+
+# Format
+highlighter: rouge
+
+# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
+cover_color: slate
+
+# The blog button should not be removed.
+blog_button:
+    title: Blog
+    description: Visit blog
+
+# Navigation buttons in the front page.
+nav:
+
+# Pagination
+gems: [jekyll-paginate]
+paginate: 10
+paginate_path: "page/:num/"
+
+# Comment
+comment:
+    disqus:
+    # duoshuo: 
+    
+# Social
+social:
+    github: hveiga
+    stack-overflow: 2209390
+    linkedin: hveigor
+    twitter: hveigor
+
+# Google Analytics
+ga:
+    id: UA-32103527-1
+    host: auto

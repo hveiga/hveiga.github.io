@@ -1,0 +1,50 @@
+<header class="panel-cover {% if page.layout == 'post' or page.layout == 'page' %}panel-cover--collapsed{% endif %}"
+        style="background-image: url('/assets/images/background-cover.jpg')">
+    <div class="panel-main">
+
+        <div class="panel-main__inner panel-inverted">
+            <div class="panel-main__content">
+
+                <!-- FIXME <a href="/#blog" title="{{ site.title }}" class="blog-button"><img src="/assets/images/avatar.jpg" width="250" alt="{{ site.title }} logo" class="panel-cover__logo logo" /></a>-->
+                <img src="/assets/images/avatar.jpg" width="250" alt="{{ site.title }} logo" class="panel-cover__logo logo"/>
+                <!-- FIXME <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for {{ site.title }}" class="blog-button">{{ site.title }}</a></h1> -->
+                <h1 class="panel-cover__title panel-title">{{ site.title }}</h1>
+                {% if site.subtitle %}
+                <span class="panel-cover__subtitle panel-subtitle">{{site.subtitle}}</span>
+                {% endif %}
+                <hr class="panel-cover__divider"/>
+                <div style="width: 400px; height: 60px; margin: 50%;margin: 0 auto;">
+                    <a href="https://www.packtpub.com/application-development/akka-cookbook" target="_blank"><img src="/assets/images/book.png" width="50" alt="Akka Cookbook" style="float: right;margin-right: 20px;" class="panel-cover__logo"/></a>
+                    <p class="panel-cover__description" style="width: 300px;margin-left: -10px;">
+                        Co-author of <a href="https://www.packtpub.com/application-development/akka-cookbook" target="_blank">Akka Cookbook</a>.<br/>Get your copy now!
+                    </p>
+                </div>
+                <hr class="panel-cover__divider panel-cover__divider--secondary"/>
+
+                {% if site.welcome_message %}
+                <p style="text-align:justify; padding: 10px 0;" class="panel-cover__description">{{ site.welcome_message }}</p>
+                {% endif %}
+
+                <div class="navigation-wrapper">
+                    <div>{% include social.html %}</div>
+                    <div>
+                        <nav class="cover-navigation cover-navigation--primary">
+                            <ul class="navigation">
+                                <!-- FIXME <li class="navigation__item"><a href="/#blog" title="{{site.blog_button.description}}" class="blog-button">{{site.blog_button.title}}</a></li> -->
+                                {% for item in site.nav %}
+                                <li class="navigation__item"><a href="{{item.url}}" target="_blank" title="{{item.description}}">{{item.title}}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% if site.cover_color %}
+        <div class="panel-cover--overlay cover-{{site.cover_color}}" style="opacity: 0.50;filter: alpha(opacity=50);"></div>
+        {% else %}
+        <div class="panel-cover--overlay cover-disabled"></div>
+        {% endif %}
+    </div>
+</header>

@@ -1,0 +1,88 @@
+<nav class="cover-navigation navigation--social">
+    <ul class="navigation">
+
+        {% if site.social.email %}
+        <li class="navigation__item">
+            <a href="mailto:{{site.social.email}}" title="{{site.social.email}}">
+                <i class='social fa fa-envelope'></i>
+                <span class="label">Email</span>
+            </a>
+        </li>
+        {% endif %}
+
+        {% if site.social.vcf %}
+        <li class="navigation__item">
+            <a href="{{site.social.vcf}}" title="Contact">
+                <i class='social fa fa-address-card'></i><span class="label">vcard</span>
+            </a>
+        </li>
+        {% endif %}
+
+        {% if site.social.github %}
+        <li class="navigation__item">
+            <a href="https://github.com/{{site.social.github}}" title="GitHub: {{site.social.github}}" target="_blank">
+                <i class='social fa fa-github'></i>
+                <span class="label">GitHub</span>
+            </a>
+        </li>
+        {% endif %}
+
+        {% if site.social.github %}
+        <li class="navigation__item">
+            <a href="http://stackoverflow.com/users/{{site.social.stack-overflow}}" title="Stack Overflow"
+               target="_blank">
+                <i class='social fa fa-stack-overflow'></i>
+                <span class="label">Stack Overflow</span>
+            </a>
+        </li>
+        {% endif %}
+
+
+        {% if site.social.linkedin %}
+        <li class="navigation__item">
+            <a href="https://www.linkedin.com/in/{{site.social.linkedin}}" title="LinkedIn: {{site.social.linkedin}}"
+               target="_blank">
+                <i class='social fa fa-linkedin'></i>
+                <span class="label">LinkedIn</span>
+            </a>
+        </li>
+        {% endif %}
+
+        {% if site.social.twitter %}
+        <li class="navigation__item">
+            <a href="http://twitter.com/{{site.social.twitter}}" title="@{{site.social.twitter}}" target="_blank">
+                <i class='social fa fa-twitter'></i>
+                <span class="label">Twitter</span>
+            </a>
+        </li>
+        {% endif %}
+
+        {% if site.social.weibo %}
+        <li class="navigation__item">
+            <a href="http://weibo.com/{{site.social.weibo}}" title="@{{site.social.weibo}}" target="_blank">
+                <i class='social fa fa-weibo'></i>
+                <span class="label">Weibo</span>
+            </a>
+        </li>
+        {% endif %}
+
+        {% if site.social.gplus %}
+        <li class="navigation__item">
+            <a href="https://plus.google.com/{{site.social.gplus}}" rel="author" title="Google+: {{site.social.gplus}}"
+               target="_blank">
+                <i class='social fa fa-google-plus-square'></i>
+                <span class="label">Google Plus</span>
+            </a>
+        </li>
+        {% endif %}
+
+        <!-- FIXME -->
+        <!--<li class="navigation__item">-->
+            <!--<a href="/feed.xml" rel="author" title="RSS" target="_blank">-->
+                <!--<i class='social fa fa-rss'></i>-->
+                <!--<span class="label">RSS</span>-->
+            <!--</a>-->
+        <!--</li>-->
+
+    </ul>
+</nav>
